@@ -1,0 +1,26 @@
+﻿@model List<Product>
+@{
+    Layout = "_ProjectTemplate";
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+       <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Quantity</td>
+       </tr>
+    }
+</table>
